@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html lang="th" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>นายอนุชา สมบูรณเสริฐ - E-Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        'thai': ['Sarabun', 'sans-serif'],
+                    },
+                    colors: {
+                        'primary': '#2563eb',
+                        'secondary': '#1e40af',
+                        'accent': '#3b82f6',
+                    }
+                }
+            }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Sarabun:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.js"></script>
+</head>
+<body class="font-thai bg-white text-gray-800">
+    <!-- Navigation -->
+    <nav class="fixed top-0 w-full bg-white/90 backdrop-blur-md z-50 border-b border-gray-100">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center py-4">
+                <div class="text-xl font-bold text-primary">Portfolio</div>
+                <div class="hidden md:flex space-x-8">
+                    <a href="#about" class="text-gray-600 hover:text-primary transition-colors">เกี่ยวกับ</a>
+                    <a href="#skills" class="text-gray-600 hover:text-primary transition-colors">ทักษะ</a>
+                    <a href="#experience" class="text-gray-600 hover:text-primary transition-colors">ประสบการณ์</a>
+                    <a href="#projects" class="text-gray-600 hover:text-primary transition-colors">ผลงาน</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary transition-colors">ติดต่อ</a>
+                </div>
+                <button id="mobile-menu-btn" class="md:hidden p-2">
+                    <i data-lucide="menu" class="w-6 h-6"></i>
+                </button>
+            </div>
+            <!-- Mobile Menu -->
+            <div id="mobile-menu" class="md:hidden hidden pb-4">
+                <div class="flex flex-col space-y-2">
+                    <a href="#about" class="text-gray-600 hover:text-primary transition-colors py-2">เกี่ยวกับ</a>
+                    <a href="#skills" class="text-gray-600 hover:text-primary transition-colors py-2">ทักษะ</a>
+                    <a href="#experience" class="text-gray-600 hover:text-primary transition-colors py-2">ประสบการณ์</a>
+                    <a href="#projects" class="text-gray-600 hover:text-primary transition-colors py-2">ผลงาน</a>
+                    <a href="#contact" class="text-gray-600 hover:text-primary transition-colors py-2">ติดต่อ</a>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero/About Section -->
+    <section id="about" class="min-h-screen flex items-center bg-gradient-to-br from-blue-50 to-indigo-100 pt-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+                <div class="text-center lg:text-left">
+                    <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 mb-6">
+                        สวัสดี, ผม
+                        <span class="text-primary">ภคิน ภารสมบูรณ์</span>
+                    </h1>
+                    <p class="text-xl sm:text-2xl text-gray-600 mb-4">Full Stack Developer</p>
+                    <p class="text-lg text-gray-600 mb-8 max-w-xl">
+                        นักพัฒนาเว็บไซต์ที่มีประสบการณ์ในการสร้างแอปพลิเคชันที่ทันสมัยและมีประสิทธิภาพ 
+                        ด้วยความหลงใหลในการเขียนโค้ดและการแก้ปัญหา
+                    </p>
+                    <div class="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start">
+                        <a href="#projects" class="bg-primary text-white px-8 py-3 rounded-lg hover:bg-secondary transition-colors inline-flex items-center justify-center">
+                            <i data-lucide="eye" class="w-5 h-5 mr-2"></i>
+                            ดูผลงาน
+                        </a>
+                        <a href="#contact" class="border-2 border-primary text-primary px-8 py-3 rounded-lg hover:bg-primary hover:text-white transition-colors inline-flex items-center justify-center">
+                            <i data-lucide="download" class="w-5 h-5 mr-2"></i>
+                            ดาวน์โหลด CV
+                        </a>
+                    </div>
+                </div>
+                <div class="flex justify-center lg:justify-end">
+                    <div class="relative">
+                        <div class="w-80 h-80 bg-gradient-to-br from-primary to-secondary rounded-full flex items-center justify-center">
+                            <i data-lucide="user" class="w-32 h-32 text-white"></i>
+                        </div>
+                        <div class="absolute -top-4 -right-4 w-24 h-24 bg-accent rounded-full flex items-center justify-center">
+                            <i data-lucide="code" class="w-12 h-12 text-white"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">ทักษะและความสามารถ</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">เทคโนโลยีและเครื่องมือที่ผมใช้ในการพัฒนาโปรเจกต์ต่างๆ</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Technical Skills -->
+                <div class="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="code-2" class="w-8 h-8 text-primary mr-3"></i>
+                        <h3 class="text-xl font-semibold">เทคนิคการพัฒนา</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span>JavaScript</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>React</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Node.js</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Python</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Design Skills -->
+                <div class="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="palette" class="w-8 h-8 text-primary mr-3"></i>
+                        <h3 class="text-xl font-semibold">การออกแบบ</h3>
+                    </div>
+                    <div class="space-y-3">
+                        <div class="flex items-center justify-between">
+                            <span>UI/UX Design</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Figma</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Adobe XD</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 70%"></div>
+                            </div>
+                        </div>
+                        <div class="flex items-center justify-between">
+                            <span>Tailwind CSS</span>
+                            <div class="w-32 bg-gray-200 rounded-full h-2">
+                                <div class="bg-primary h-2 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Soft Skills -->
+                <div class="bg-gray-50 p-6 rounded-xl hover:shadow-lg transition-shadow md:col-span-2 lg:col-span-1">
+                    <div class="flex items-center mb-4">
+                        <i data-lucide="users" class="w-8 h-8 text-primary mr-3"></i>
+                        <h3 class="text-xl font-semibold">ทักษะอื่นๆ</h3>
+                    </div>
+                    <div class="grid grid-cols-2 gap-2">
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">การทำงานเป็นทีม</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">การแก้ปัญหา</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">การติดต่อสื่อสار</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">การจัดการเวลา</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">ภาษาอังกฤษ</span>
+                        <span class="bg-primary/10 text-primary px-3 py-1 rounded-full text-sm">Git/GitHub</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Experience & Education Section -->
+    <section id="experience" class="py-20 bg-gray-50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">ประสบการณ์และการศึกษา</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">ประวัติการทำงานและการศึกษาที่สร้างความเชี่ยวชาญในด้านการพัฒนา</p>
+            </div>
+            
+            <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+                <!-- Work Experience -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                        <i data-lucide="briefcase" class="w-6 h-6 mr-3 text-primary"></i>
+                        ประสบการณ์การทำงาน
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                                <h4 class="text-lg font-semibold">Senior Frontend Developer</h4>
+                                <span class="text-sm text-gray-500">2022 - ปัจจุบัน</span>
+                            </div>
+                            <p class="text-primary font-medium mb-2">บริษัท เทคโนโลยี อินโนเวชั่น จำกัด</p>
+                            <p class="text-gray-600">พัฒนาและดูแลระบบเว็บแอปพลิเคชันหลัก ทำงานร่วมกับทีม UX/UI ในการสร้างประสบการณ์ผู้ใช้ที่ดี และนำเทคโนโลยีใหม่ๆ มาใช้ในโปรเจกต์</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-gray-300">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                                <h4 class="text-lg font-semibold">Frontend Developer</h4>
+                                <span class="text-sm text-gray-500">2020 - 2022</span>
+                            </div>
+                            <p class="text-primary font-medium mb-2">บริษัท ดิจิทัล โซลูชั่น จำกัด</p>
+                            <p class="text-gray-600">พัฒนาเว็บไซต์และเว็บแอปพลิเคชันสำหรับลูกค้าในหลากหลายอุตสาหกรรม ใช้เทคโนโลยี React, Vue.js และ responsive design</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-gray-300">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                                <h4 class="text-lg font-semibold">Junior Web Developer</h4>
+                                <span class="text-sm text-gray-500">2019 - 2020</span>
+                            </div>
+                            <p class="text-primary font-medium mb-2">บริษัท เว็บ ครีเอทีฟ จำกัด</p>
+                            <p class="text-gray-600">เริ่มต้นอาชีพด้วยการพัฒนาเว็บไซต์พื้นฐาน เรียนรู้เทคโนโลยีใหม่ๆ และสะสมประสบการณ์ในการทำงานเป็นทีม</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Education -->
+                <div>
+                    <h3 class="text-2xl font-bold text-gray-900 mb-8 flex items-center">
+                        <i data-lucide="graduation-cap" class="w-6 h-6 mr-3 text-primary"></i>
+                        การศึกษา
+                    </h3>
+                    <div class="space-y-6">
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-primary">
+                            <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between mb-2">
+                                <h4 class="text-lg font-semibold">วิทยาศาสตรบัณฑิต (วิทยาการคอมพิวเตอร์)</h4>
+                                <span class="text-sm text-gray-500">2015 - 2019</span>
+                            </div>
+                            <p class="text-primary font-medium mb-2">มหาวิทยาลยเทคโนโลยีพระจอมเกล้าธนบุรี</p>
+                            <p class="text-gray-600">เกรดเฉลี่ย 3.45 • ได้รับรางวัลนักศึกษาดีเด่นด้านเทคโนโลยี • โปรเจกต์จบการศึกษา: ระบบจัดการคลังสินค้าด้วย IoT</p>
+                        </div>
+                        
+                        <div class="bg-white p-6 rounded-xl shadow-sm border-l-4 border-gray-300">
+                            <h4 class="text-lg font-semibold mb-4">ใบรับรองและการอบรม</h4>
+                            <div class="space-y-2">
+                                <div class="flex items-center">
+                                    <i data-lucide="award" class="w-4 h-4 text-primary mr-2"></i>
+                                    <span>AWS Certified Developer - Associate (2023)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="award" class="w-4 h-4 text-primary mr-2"></i>
+                                    <span>Google Analytics Certified (2022)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="award" class="w-4 h-4 text-primary mr-2"></i>
+                                    <span>React Developer Certification - Meta (2022)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <i data-lucide="award" class="w-4 h-4 text-primary mr-2"></i>
+                                    <span>TOEIC Score: 850 (2021)</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="py-20 bg-white">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">ผลงานที่น่าภาคภูมิใจ</h2>
+                <p class="text-lg text-gray-600 max-w-2xl mx-auto">โปรเจกต์ที่ได้พัฒนาและสร้างสรรค์ด้วยความตั้งใจและเทคโนโลยีที่ทันสมัย</p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Project 1 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="h-48 bg-gradient-to-br from-blue-400 to-purple-500 flex items-center justify-center">
+                        <i data-lucide="shopping-cart" class="w-16 h-16 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">E-Commerce Platform</h3>
+                        <p class="text-gray-600 mb-4">แพลตฟอร์มการค้าออนไลน์ที่ครบครันด้วย React และ Node.js รองรับการชำระเงินและจัดการสินค้า</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">React</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Node.js</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">MongoDB</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:text-secondary flex items-center">
+                                <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                                Demo
+                            </a>
+                            <a href="#" class="text-primary hover:text-secondary flex items-center">
+                                <i data-lucide="github" class="w-4 h-4 mr-1"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 2 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="h-48 bg-gradient-to-br from-green-400 to-blue-500 flex items-center justify-center">
+                        <i data-lucide="line-chart" class="w-16 h-16 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Analytics Dashboard</h3>
+                        <p class="text-gray-600 mb-4">แดชบอร์ดสำหรับวิเคราะห์ข้อมูลแบบเรียลไทม์พร้อมกราฟและรายงานที่สวยงาม</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Vue.js</span>
+                            <span class="bg-yellow-100 text-yellow-800 px-2 py-1 rounded text-sm">D3.js</span>
+                            <span class="bg-red-100 text-red-800 px-2 py-1 rounded text-sm">Laravel</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:text-secondary flex items-center">
+                                <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                                Demo
+                            </a>
+                            <a href="#" class="text-primary hover:text-secondary flex items-center">
+                                <i data-lucide="github" class="w-4 h-4 mr-1"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 3 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="h-48 bg-gradient-to-br from-purple-400 to-pink-500 flex items-center justify-center">
+                        <i data-lucide="smartphone" class="w-16 h-16 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Mobile Banking App</h3>
+                        <p class="text-gray-600 mb-4">แอปพลิเคชันธนาคารบนมือถือที่ปลอดภัยและใช้งานง่าย พร้อมฟีเจอร์ครบครัน</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">React Native</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Firebase</span>
+                            <span class="bg-orange-100 text-orange-800 px-2 py-1 rounded text-sm">TypeScript</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:text-secondary flex items-center">
+                                <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                                Demo
+                            </a>
+                            <a href="#" class="text-primary hover:text-secondary flex items-center">
+                                <i data-lucide="github" class="w-4 h-4 mr-1"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 4 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="h-48 bg-gradient-to-br from-yellow-400 to-orange-500 flex items-center justify-center">
+                        <i data-lucide="book-open" class="w-16 h-16 text-white"></i>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-semibold mb-2 group-hover:text-primary transition-colors">Learning Management System</h3>
+                        <p class="text-gray-600 mb-4">ระบบจัดการการเรียนรู้ออนไลน์สำหรับสถาบันการศึกษา พร้อมระบบสอบและประเมินผล</p>
+                        <div class="flex flex-wrap gap-2 mb-4">
+                            <span class="bg-blue-100 text-blue-800 px-2 py-1 rounded text-sm">Next.js</span>
+                            <span class="bg-green-100 text-green-800 px-2 py-1 rounded text-sm">Prisma</span>
+                            <span class="bg-purple-100 text-purple-800 px-2 py-1 rounded text-sm">PostgreSQL</span>
+                        </div>
+                        <div class="flex space-x-4">
+                            <a href="#" class="text-primary hover:text-secondary flex items-center">
+                                <i data-lucide="external-link" class="w-4 h-4 mr-1"></i>
+                                Demo
+                            </a>
+                            <a href="#" class="text-primary hover:text-secondary flex items-center">
+                                <i data-lucide="github" class="w-4 h-4 mr-1"></i>
+                                Code
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Project 5 -->
+                <div class="bg-white rounded-xl shadow-lg overflow-hidden hover:shadow-xl transition-shadow group">
+                    <div class="h-48 bg-gradient-to-br from-red-400 to-pink-500 flex items-center justify-center">
+                        <i data-lucide="map-pin" class="w-16 h-16 text-white"></i>
+                    </div>
